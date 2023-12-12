@@ -1,0 +1,64 @@
+git init
+mkdir {example,home}
+cd example
+touch helper.sh
+nano helper.sh
+{
+	for ((i=0; i<879; i++))
+	do
+	touch example${i}.txt 
+	done
+}
+chmod +x helper.sh
+./helper.sh
+cd ..
+cd home
+mkdir user1
+cd user1
+mkdir {files,photos,videos}
+cd files
+touch helper.sh
+nano helper.sh
+{
+	for ((i=0; i<30; i++))
+	do
+	touch file${i}.txt 
+	done
+}
+chmod +x helper.sh
+./helper.sh
+cd ..
+cd photos
+touch helper.sh
+nano helper.sh
+{
+	for ((i=0; i<179; i++))
+	do
+	touch photo${i}.txt 
+	done
+}
+chmod +x helper.sh
+./helper.sh
+cd ..
+cd videos
+touch helper.sh
+nano helper.sh
+{
+	for ((i=0; i<29; i++))
+	do
+	touch video${i}.txt 
+	done
+}
+chmod +x helper.sh
+./helper.sh
+cd ..
+cd ..
+cp user1 user2
+cp user1 user3
+cp user1 user4
+cp user1 user5
+cd..
+git add example
+git add home
+git commit -m 'Task Complete'
+git push origin master
